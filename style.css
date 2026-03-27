@@ -1,0 +1,90 @@
+:root {
+  --azul: #2E6DA4;
+  --verde: #1E7B4B;
+  --vermelho: #C0392B;
+  --radius: 8px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container principal */
+.form-container {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Grupo */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Inputs */
+input {
+  padding: 0.75rem 1rem;
+  border: 2px solid #dde1e7;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Estados */
+input:focus {
+  border-color: var(--azul);
+}
+
+input.error {
+  border-color: var(--vermelho);
+  background: #fff5f5;
+}
+
+input.success {
+  border-color: var(--verde);
+  background: #f0fff4;
+}
+
+/* Mensagem de erro */
+.error-msg {
+  color: var(--vermelho);
+  font-size: 0.85rem;
+}
+
+/* Botão */
+button {
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--azul);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #245a86;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 1.25rem;
+    margin: 1rem;
+  }
+}
